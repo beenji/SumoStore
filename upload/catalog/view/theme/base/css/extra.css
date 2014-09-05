@@ -1,0 +1,570 @@
+/**
+ * Extra.css
+ * Created 17-04-2014
+ * Updated 06-06-2014
+ *
+ * Defines extra's, theme specific styling
+*/
+body {
+    background-color: #F0F0F0;
+    color: #555555;
+    font-family: 'Open Sans',Helvetica,sans-serif;
+    font-size: 13px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Open Sans',Helvetica,sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: #FFF;
+}
+
+.btn-order {
+    color: #FFF;
+    background-image: linear-gradient(to bottom, #5CB85C 0%, #419641 100%);
+    background-repeat: repeat-x;
+    border-bottom-color: #3E8F3E;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #3E8F3E;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #3E8F3E;
+    border-top-color: #3E8F3E;
+}
+.btn-order:hover, .btn-order:focus {
+    background-color: #419641;
+    background-position: 0 -15px;
+}
+.btn-order:active, .btn-order.active {
+    background-color: #419641;
+    border-bottom-color: #3E8F3E;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #3E8F3E;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #3E8F3E;
+    border-top-color: #3E8F3E;
+}
+
+.body-wrapper {
+    background-color: #FFF;
+}
+
+.header-wrapper {
+
+}
+
+#top-line {
+    background-color: #2D3949;
+    color: #CCC;
+}
+    #top-line a, #topline a:hover {
+        color: #FFF;
+    }
+
+#header-search {
+    margin-top: 22px;
+}
+#header-search .input-group-addon {
+    cursor: pointer;
+}
+
+#cart, #cart a {
+    color: #B4B4B4;
+}
+#cart a.btn {
+    color: #FFF;
+}
+
+#header-menu {
+    text-transform: uppercase;
+    background-color: #2D3949;
+}
+    #header-menu > li {
+        border-left: 1px solid #F1F1F1;
+    }
+        #header-menu > li:first-child {
+            border-left: none;
+        }
+
+    #header-menu a {
+        color: #FFF;
+    }
+    #header-menu > li > a:hover {
+        background-color: #6D7B8E;
+    }
+
+    #header-menu > li > ul {
+        display: table-cell;
+        vertical-align: top;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #header-menu > li:hover > ul {
+        visibility: visible;
+        display: table;
+        opacity: 1;
+        z-index: 999;
+        padding-left: 0;
+    }
+
+        #header-menu > li > ul > li {
+            min-height: 32px;
+            display: block;
+            min-width: auto;
+            white-space: nowrap;
+            z-index: 999;
+            background-color: #2D3949;
+        }
+
+        #header-menu > li > ul > li > a {
+            display: block;
+            text-decoration: none;
+            position: relative;
+            padding-left: 5px;
+            padding-right: 5px;
+            line-height: 40px;
+        }
+
+        #header-menu > li > ul > li > a:hover {
+            background-color: #6D7B8E;
+        }
+
+        #header-menu > li > ul > li:last-child {
+            border-bottom: none;
+        }
+
+.footer-container {
+    background-color: #374558;
+    color: #FFF;
+}
+    #bottom-footer {
+        border-top: 3px solid #6D7B8E;
+    }
+    #bottom-footer a {
+        text-decoration: underline;
+    }
+
+.content-container .sidebar .header h3 {
+    background-color: #6D7B8E;
+    color: #FFF;
+}
+    .product-offer-holder {
+        padding: 5px;
+        background-color: #DEDEDE;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+.content-container .sidebar .content {
+    background-color: #F9FAFB;
+}
+    .content-container .sidebar .content a {
+        color: #374558;
+    }
+
+.sidebar-home {
+    padding-top: 30px;
+}
+
+#cart-form a.btn, .content-container .content .btn {
+    color: #FFF;
+}
+
+/* Slider */
+.csSlideOuter {
+    margin-top: 30px;
+    padding: 0 32px;
+}
+
+.csAction > .csPrev {
+    left: -32px;
+    top: 0;
+    bottom: 0;
+    line-height: 270px;
+    display: block;
+    height: 270px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    opacity: 1;
+}
+
+.csAction > .csNext {
+    right: -32px;
+    top: 0;
+    bottom: 0;
+    line-height: 270px;
+    background-color: #fff;
+    display: block;
+    height: 270px;
+    background-repeat: no-repeat;
+    background-position: -32px 50%;
+    opacity: 1;
+}
+
+/* Form/inputs */
+.form-control {
+    border-radius: 1px;
+}
+
+/* Buttons */
+.btn {
+    font-size: 12px;
+    color: #FFF;
+    line-height: 1.65857;
+}
+    .btn a {
+        color: #FFF;
+    }
+
+.btn-secondary, .btn-secondary:focus {
+    background-color: #6D7B8E;
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: rgba(0, 0, 0, 0);
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: #778598;
+}
+    a.btn, a.btn-secondary, a.btn-primary, a.btn:hover, a.btn-primary:hover, a.btn-secondary:hover {
+        color: #FFF;
+    }
+
+/* Product box */
+.product-box {
+    padding: 15px;
+}
+.product-box:hover {
+    background-color: #f5f5f5;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+/**
+* Finetuning
+*/
+.input-label {
+    line-height: 24px;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.product-filter .input-label {
+    padding-left: 17px;
+}
+
+/**
+* List product
+*/
+.product-list-type-list .col-md-4,
+.product-list-type-list .col-md-6 {
+    width: 100%;
+}
+
+.product-list-type-list .product-box {
+    padding: 15px 160px 15px 200px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.product-list-type-list .product-image {
+    float: left;
+    width: 180px;
+    margin-left: -200px;
+    text-align: center;
+}
+
+.product-list-type-list .product-image  img {
+    max-height: 80px;
+}
+
+.product-list-type-list .product-buttons {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    text-align: right;
+}
+
+.product-box big.price {
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.product-box big.new-price {
+    font-weight: 400;
+    font-size: 16px; 
+    line-height: 30px;   
+}
+
+.product-box small.old-price {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.product-list-type-grid .product-box {
+    margin-bottom: 20px;
+}
+
+.product-list-type-grid .product-image img {
+    max-height: 80px;
+}
+
+.product-list-type-grid p.product-description {
+    height: 120px;
+    text-align: center;
+}
+
+.product-list-type-grid .product-buttons {
+    height: 100px;
+}
+
+/**
+* "Table views"
+*/
+.element-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*border-top: 3px solid #6D7B8E;*/
+}
+
+.element-list li {
+    padding: 10px 8px;
+}
+
+.element-list li:nth-child(2n) {
+    background-color: #F9FAFB;
+    border-radius: 4px;
+}
+
+.element-list li dl {
+    padding-left: 90px;
+    display: block;
+    margin: 0 0 5px;
+}
+
+.element-list li dl dt {
+    margin-left: -90px;
+    width: 80px;
+    font-weight: bold;
+    float: left;
+}
+
+.element-list li dl:after {
+    content: " ";
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+}
+
+.element-list li .col-md-6 {
+    margin-bottom: 8px;
+}
+
+.element-list p.action {
+    padding-top: 5px;
+}
+
+.element-list p.action a i {
+    color: #6D7B8E;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+dl.info {
+    padding-left: 130px;
+    margin-bottom: 8px;
+}
+
+dl.info dt {
+    float: left;
+    margin-left: -130px;
+    width: 120px;
+}
+
+dl.info dd:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+}
+
+table.order-summary {
+    width: auto;
+}
+
+table.order-summary tbody td,
+table.order-summary tbody th {
+    border-top: none;
+    padding-top: 0;
+    padding-bottom: 10px;
+    border-bottom: none;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+ul.timeline:before, ul.timeline:after {
+    content: " ";
+    display: block;
+    border: 2px solid #f41958;
+    border-radius: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+ul.timeline li {
+    border-left: 2px dashed #f41958;
+    margin: 0 0 0 7px;
+    padding: 5px 0 5px 20px;
+}
+
+ul.timeline li dl {
+    margin-bottom: 0;
+}
+
+ul.timeline li dl dt {
+    font-weight: normal;
+    color: #B4B4B4;
+}
+
+ul.timeline li dl dt strong {
+    color: #000;
+}
+
+ul.timeline li dl dt,
+ul.timeline li dl dd {
+    line-height: 24px;
+}
+
+i.glyphicon.icn-visible {
+    color: #6D7B8E;
+}
+
+i.glyphicon.icn-visible:hover {
+    color: #f41958;
+}
+
+.small-thumb {
+    max-width: 70px;
+    max-height: 54px;
+}
+
+.home-slider {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+* Compare products
+*/
+.compare-list {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.compare-list li {
+    line-height: 24px;
+    display: block;
+    min-height: 34px;
+    padding: 5px 10px;
+}
+
+/**
+* Labels
+*/
+.compare-list.compare-labels {
+    margin-top: 230px;
+}
+
+.compare-list.compare-labels li {
+    /*padding-left: 0;*/
+}
+
+.compare-list.compare-labels li:nth-child(2n+1) {
+    background-color: #F9FAFB;
+}
+
+/**
+* Values/Products
+*/
+.compare-list.compare-values {
+    text-align: center;
+}
+
+.compare-list.compare-values li:nth-child(2n+3) {
+    background-color: #F9FAFB;
+}
+
+.compare-list .p-price {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+    color: #428BCA;
+}
+
+.compare-list .p-title {
+    font-size: 24px;
+    line-height: 40px;
+    color: #f41958;
+}
+
+.compare-list .p-description {
+    min-height: 130px;
+}
+
+.compare-list .p-image {
+    padding: 30px 0;
+    height: 160px;
+}
+
+.compare-list .p-image img {
+    max-height: 100px;
+    max-width: 140px;
+}
+
+.compare-list.compare-values li.p-footer {
+    background-color: #fff;
+}
+
+.compare-container {
+    overflow-x: auto;
+}
+
+.compare-container .compare-item {
+    width: 306px;
+    margin: 0;
+    float: left;
+}
+
+.compare-container .compare-item + .compare-item {
+    margin-left: 16px;
+}

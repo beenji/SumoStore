@@ -1,0 +1,313 @@
+/*
+
+SumoStore Admin CSS
+
+
+Uniform Theme: Uniform Default
+Version: 1.8
+By: Josh Pyles
+License: MIT License
+---
+For use with the Uniform plugin:
+http://uniformjs.com/
+
+*/
+/* General settings */
+div.selector, div.selector span, div.checker span, div.radio span, div.uploader, div.uploader span.action, div.button, div.button span {
+  background-image: url("../../img/form-controls.png");
+  background-repeat: no-repeat; }
+div.selector, div.checker, div.button, div.radio, div.uploader {
+  display: -moz-inline-box;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  /* Keeping this as :focus to remove browser styles */ }
+  div.selector:focus, div.checker:focus, div.button:focus, div.radio:focus, div.uploader:focus {
+    outline: 0; }
+div.selector, div.selector *, div.radio, div.radio *, div.checker, div.checker *, div.uploader, div.uploader *, div.button, div.button * {
+  margin: 0;
+  padding: 0; }
+
+/* Remove default webkit and possible mozilla .search styles.
+ * Keeping this as :active to remove browser styles */
+div.checker input,
+input[type="search"],
+in: 26px;
+  padding: 0 0 0 10px;
+  positioput[type="search"]:active {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+/* Select */
+div.selector {
+  position: relative;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .1);
+  line-height: 40px;
+  border-radius: 3px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 15px;
+  background: none; }
+  div.selector span {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    background-position: 100% -40px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    display: block; }
+  div.selector.fixedWidth {
+    width: 190px; }
+    div.selector.fixedWidth span {
+      width: 155px; }
+  div.selector select {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    border: none;
+    background: none;
+    position: absolute;
+    height: 22px;
+    top: 10px;
+    left: 15px;
+    width: 100%; }
+
+/* Checkbox */
+div.checker {
+  position: relative;
+  margin-top: -3px; }
+  div.checker, div.checker span, div.checker input {
+    width: 20px;
+    height: 20px; }
+  div.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 0; }
+    div.checker span.checked {
+      background-position: -20px 0; }
+  div.checker input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    border: none;
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+  .two div.checker span.checked {
+    background-position: -40px 0; }
+  .three div.checker span.checked {
+    background-position: -60px 0; }
+
+/* Radio */
+div.radio {
+  position: relative;
+  margin-top: -3px; }
+  div.radio, div.radio span, div.radio input {
+    width: 21px;
+    height: 20px; }
+  div.radio span {
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 -20px; }
+    div.radio span.checked {
+      background-position: -21px -20px; }
+  div.radio input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    border: none;
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    text-align: center; }
+  .two div.radio span.checked {
+    background-position: -42px -20px; }
+  .three div.radio span.checked {
+    background-position: -63px -20px; }
+
+/* PRESENTATION */
+
+/* Select */
+div.selector {
+  font-size: 12px; }
+  div.selector span {
+    color: #666;
+    text-shadow: 0 1px 0 white; }
+  div.selector select {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px; }
+  div.selector.disabled span, div.selector.disabled.active span {
+    color: #bbb; }
+
+/* Checker */
+div.checker {
+  margin-right: 5px; }
+
+input.uniform-input, input.uniform-input:focus {
+  background-color: #fff; }
+
+/* Login page */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    font-size: 14px;
+    background: #6d7b8e url('../../img/sumostore-login.png') no-repeat 50% 0;
+    padding-top: 250px;
+    color: #6d7b8e;
+}
+
+.loginWrapper {
+    width: 362px;
+    margin: 0 auto;
+}
+
+.panel {
+    background: #fff;
+    padding: 32px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+
+}
+
+p.subtitle {
+    text-align: center;
+    color: #acb4bf;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+p.copyright, p.copyright a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    text-decoration:none;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea {
+    border: 1px solid #ddd;
+    -webkit-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    height: 40px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.btn {
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    padding: 0 45px;
+    line-height: 43px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 200ms;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn.btnOne { background-color: #f41958; }
+.btn.btnOne:hover { background-color: #ff336e; }
+.btn.btnOne:active { background-color: #c90d43; }
+
+input.btn {
+    overflow: visible;
+    font-family: "Helvetica", Arial;
+    cursor: pointer;
+    height: 43px;
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.row {
+    margin-bottom: 15px
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+.error, .success, .info {
+    background-color: #dc0e0e;
+    padding: 10px;
+    color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.success {
+    background-color: #a0d219;
+}
+
+.info {
+    background-color: #5d9ff1;
+}

@@ -1,0 +1,1 @@
+<?php exit('You would want to access this file, wouldnt you..')

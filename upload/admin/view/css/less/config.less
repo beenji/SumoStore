@@ -1,0 +1,54 @@
+/*General colors palette*/
+@primary-color: #374558;
+@subp-color: (@primary-color - 13%);
+@lightedp-color: (@primary-color + 10%);
+@text-color: #FFF;
+
+/*General elements*/
+@link-color: @primary-color;
+@sidebar-color: #6d7b8e;
+
+/*Flat palette*/
+@green: #93e529;
+@dark-green: #629e14;
+@lemon: #40D47E;
+@dark-lemon: #2CC36B;
+@blue: #40a5c3;
+@dark-blue: #268dac;
+@purple: #40a5c3;
+@dark-purple: #268dac;
+@prusia: #3D566D;
+@dark-prusia: #354B60;
+@yellow: #FED16C;
+@orange: #f97f32;
+@pumpkin: #E98B39;
+@dark-pumpkin: #EC5E00;
+@red: #f41958;
+@dark-red: #c90d43;
+@silver: #FBFCFC;
+@dark-silver: #C5CBCE;
+@concrete: #6d7b8e;
+@dark-concrete: #8C9899;
+@dark: #23262B;
+
+/*social colors*/
+
+@facebook: #5d82d1;
+@twitter: #50bff5;
+@google: #eb5e4c;
+@dribbble: #f7659c;
+@youtube: #ef4e41;
+@flickr: #0063dc;
+@yahoo: #ab47ac;
+@linkedin: #238cc8;
+@pinterest: #e13138;
+@github: #333;
+@tumblr: #426d9b;
+/*Functions*/
+.border-radius(@radius: 3px){
+	
+  -webkit-border-radius: @radius; /* Android = 1.6, iOS 1-3.2, Safari 3-4 */
+          border-radius: @radius; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+  background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
+
+}

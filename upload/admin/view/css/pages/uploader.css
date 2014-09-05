@@ -1,0 +1,144 @@
+.image-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+.image-list li {
+	display: block;
+	width: 80px;
+	height: 85px;
+	overflow: hidden;
+	float: left;
+	margin: 0 5px 5px 0;
+	text-align: center;
+	position: relative;
+}
+
+.image-list .image-list-footer {
+	background-color: #e5e5e5;
+	line-height: 20px;
+	height: 20px;
+	text-align: center;
+	display: block;
+	margin-top: 5px;
+	font-size: 11px;
+}
+
+.image-list .image-list-footer input {
+	margin-top: -1px;
+}
+
+.image-list li img {
+	display: block;
+	max-width: 100px;
+	margin: 0 auto;
+	max-height: 60px;
+}
+
+.image-list li > a {
+	display: block;
+	height: 60px;
+	font-size: 30px;
+	font-weight: 100;
+	line-height: 60px;
+	-webkit-transition: background-color 100ms, color 100ms;
+	-moz-transition: background-color 100ms, color 100ms;
+}
+
+.image-list li a.remove {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: transparent;
+}
+
+.image-list li a.remove:hover {
+	background-color: rgba(0, 0, 0, .2);
+	color: rgba(255, 255, 255, .6);
+	text-indent: 0;
+}
+
+.image-list li a.upload {
+	background-color: #e5e5e5;
+	color: #fff;	
+}
+
+.image-list li a.upload:hover {
+	background-color: #dfdfdf;
+}
+
+.image-list li a.push-left {
+	line-height: 20px;
+	float: left;
+	width: 50%;
+	padding-left: 20%;
+	text-align: center;
+}
+
+.image-list li a.push-right {
+	line-height: 20px;
+	float: left;
+	width: 50%;
+	padding-right: 20%;
+	text-align: center;
+}
+
+.fancy-upload {
+	width: 80px;
+	height: 60px;
+	display: block;
+	text-align: center;
+	line-height: 60px;
+	position: relative;
+	overflow: hidden;
+}
+
+.fancy-upload img {
+	vertical-align: middle;
+	max-width: 100px;
+	max-height: 80px;
+}
+
+.fancy-upload a {
+	display: block;
+	position: absolute;
+	top: 0;
+	height: 60px;
+	width: 80px;
+	font-size: 30px;
+	font-weight: 100;
+	color: #fff;
+	-webkit-transition: background-color 100ms, color 100ms;
+	-moz-transition: background-color 100ms, color 100ms;
+}
+
+.fancy-upload a.fu-new {
+	background-color: #e5e5e5;
+}
+
+.fancy-upload a.fu-edit {
+	left: 0;
+	width: 40px;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.fancy-upload a.fu-delete {
+	right: 0;
+	width: 40px;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.fancy-upload a.fu-new:hover {
+	background-color: #d5d5d5;
+}
+
+/*.fancy-upload a.fu-edit:hover, 
+.fancy-upload a.fu-delete:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}*/

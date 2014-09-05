@@ -1,0 +1,58 @@
+.table-product .label {
+	line-height: 28px;
+}
+
+.table-product input[type='text'].form-control {
+	text-align: center;
+	height: 28px;
+	width: 46px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+
+.table-product .switch {
+	margin-top: 2px;
+}
+
+.table-option .switch {
+	margin-top: 6px;
+}
+
+ul.pagination {
+	margin: 0;
+}
+
+ul#category-box {
+	list-style-type: none;
+	padding: 0 8px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+ul#category-box li {
+	line-height: 22px;
+	padding: 5px 0;
+}
+
+ul#category-box li + li {
+	border-top: 1px dashed #ddd;
+}
+
+ul#category-box li strong {
+	display: block;
+}
+
+ul#category-box li a {
+	font-size: 16px;
+	color: #999;
+}
+
+.input-indicator {
+	background: #fff url('../../img/loader.gif') no-repeat 50% 50%;
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	left: 50%;
+	position: absolute;
+}

@@ -1,0 +1,83 @@
+ul.list-history {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+ul.list-history li {
+    margin: 0;
+    display: block;
+    padding-left: 38px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+ul.list-history li p:last-child {
+    margin-bottom: 0;
+}
+
+ul.list-history li:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+}
+
+ul.list-history li:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    bottom: 0;
+    width: 2px;
+    border-left: 2px dashed #ddd;
+}
+
+ul.list-history li:last-child {
+    padding-bottom: 0;
+}
+
+ul.list-history li:last-child:after {
+    display: none;
+}
+
+ul.list-history li p.history-heading {
+    color: #999;
+}
+
+ul.list-history li p.history-heading strong {
+    color: #000;
+    margin-right: 10px;
+}
+
+.textarea-footer {
+    background-color: #f0f0f0;
+    padding: 6px 7px;
+    margin: -1px 0 0 0 !important;
+    border: 1px solid #ccc;
+}
+
+.textarea-footer .row {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.textarea-footer .checkbox-inline {
+    line-height: 20px;
+    margin: 4px 0 0;
+}
+
+.textarea-footer select.form-control {
+    height: 28px;
+    padding-top: 3px;
+}
+
+.textarea-footer .btn {
+    margin-bottom: 0 !important;
+}

@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /system/
+Disallow: /install/
+Disallow: /download/
+Disallow: /admin/
+Disallow: /license.php
+Disallow: /version.php
+Disallow: /error/
+Sitemap: /sitemap.xml
