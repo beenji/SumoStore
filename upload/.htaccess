@@ -3,8 +3,8 @@ Options +FollowSymlinks
 Options -Indexes
 
 <FilesMatch "\.(tpl|ini|log)">
-    Order deny,allow
-    Deny from all
+  Order deny,allow
+  Deny from all
 </FilesMatch>
 
 <IfModule mod_expires.c>
@@ -18,6 +18,7 @@ Options -Indexes
 </IfModule>
 
 RewriteEngine On
+
 # If your SumoStore installation does not run on the main web folder make sure you alter RewriteBase accordingly
 # I.E. If you run in /shop/, alter to RewriteBase /shop/
 # Do not forget to remove the #, otherwise it won't work
@@ -53,6 +54,6 @@ RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 # php_admin_value open_basedir none
 
 ### Getting a white page? Uncomment these settings to display all errors
-php_flag display_errors on
-php_flag display_startup_errors on
-php_value error_reporting 8191
+# php_flag display_errors on
+# php_flag display_startup_errors on
+# php_value error_reporting 8191
