@@ -7,6 +7,10 @@ Options -Indexes
   Deny from all
 </FilesMatch>
 
+<Files config.mysql.php>
+  Deny from all
+</Files>
+
 <IfModule mod_expires.c>
   ExpiresActive On
   <FilesMatch ".(flv|gif|jpe?g|js|png|ico|swf|css|svg|woff|ttf|eot)$">
