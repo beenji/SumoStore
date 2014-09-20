@@ -1,11 +1,11 @@
-config.mysql.php
-license.php
+**/config.mysql.php
+**/license.php
 
 !index.html
 
-download/
-image/data/
-image/cache
-image/[0-9]
-system/cache/
-system/logs/
+**/download/
+**/mage/data/
+**/image/cache
+**/image/[0-9]
+**/system/cache/
+**/system/logs/
