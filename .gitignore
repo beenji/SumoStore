@@ -2,6 +2,26 @@
 **/license.php
 
 !index.html
+!**/catalog/view/theme/base/
+!**/apps/banktransfer
+!**/apps/cashondelivery
+!**/apps/inventory
+!**/apps/mollie
+!**/apps/multisafepay
+!**/apps/newsletterbasic
+!**/apps/paymentpickup
+!**/apps/shippingflat
+!**/apps/shippingfree
+!**/apps/shippingpickup
+!**/apps/shippingproduct
+!**/apps/shippingweight
+!**/apps/sisow
+!**/apps/sumoguardbasic
+!**/apps/widgetsimplefooter
+!**/apps/widgetsimpleheader
+!**/apps/widgetsimpleproduct
+!**/apps/widgetsimplesidebar
+
 
 **/download/
 **/mage/data/
@@ -9,3 +29,5 @@
 **/image/[0-9]
 **/system/cache/
 **/system/logs/
+**/catalog/view/theme/
+**/apps/
