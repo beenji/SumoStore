@@ -1,6 +1,6 @@
 <?php
-header('Content-type: text/css');
-header('Cache-control: public');
+header('Content-Type: text/css');
+header('Cache-Control: public');
 header('X-Powered-By: SumoStore');
 header('X-Protected-By: SumoGuard');
 
@@ -11,14 +11,14 @@ if (isset($_GET['lastmodified']) && is_numeric($_GET['lastmodified']) && (int) $
 $etag = md5_file('general.css');
 $etagHeader = (isset($_SERVER['HTTP_IF_NONE_MATCH']) ? trim($_SERVER['HTTP_IF_NONE_MATCH']) : false);
 
-header("Last-Modified: ".gmdate("D, d M Y H:i:s", $lastModified)." GMT");
-header("Etag: " . $etag);
+header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $lastModified) . ' GMT');
+header('Etag: ' . $etag);
 
-//check if page has changed. If not, send 304 and exit
+// Check if page has changed. If not, send 304 and exit
 if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
     if (@strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) == $lastModified || $etagHeader == $etagFile) {
-           header("HTTP/1.1 304 Not Modified");
-           exit;
+        header('HTTP/1.1 304 Not Modified');
+        exit;
     }
 }
 $start = microtime(true);
@@ -34,17 +34,15 @@ if (!empty($_GET['theme'])) {
         if (!empty($files)) {
             $files = explode(',', $files);
             foreach ($files as $file) {
-                $theFile = '../theme/' . $theme . '/css/' . $file;
-                if (file_exists($theFile)) {
+                $file = '../theme/' . $theme . '/css/' . $file;
+                if (file_exists($file)) {
                     $css .= 'PHP_EOL/= Extra stylesheet: ' . $file . ' =/PHP_EOL';
-                    $css .= file_get_contents($theFile);
-                }
-                else {
+                    $css .= file_get_contents($file);
+                } else {
                     $css .= 'PHP_EOL/= Extra stylesheet: ' . $file . ' was not found =/PHP_EOL';
                 }
             }
-        }
-        else {
+        } else {
             $css .= 'PHP_EOL/= Files were given, but are incorrect? =/PHP_EOL';
         }
     }
@@ -79,17 +77,14 @@ if (isset($_GET['store_id'])) {
                         }
                         switch ($name) {
                             case 'body_background':
-                                //$css .= 'body { background-color: ' . $color . '; }';
                                 $body['background-color'] = $color;
                                 break;
 
                             case 'body_background_image':
-                                //$css .= 'body { background-image: url(/image/' . $color . '); }';
                                 $body['background-image'] = 'url(/image/' . $color . ')';
                                 break;
 
                             case 'body_background_repeat':
-                                //$css .= 'body { background-repeat: ' . $color . '; }';
                                 $body['background-repeat'] = $color;
                                 break;
 
@@ -114,7 +109,6 @@ if (isset($_GET['store_id'])) {
                                 break;
 
                             case 'text_color':
-                                //$css .= 'body { color: ' . $color . '; }';
                                 $body['color'] = $color;
                                 break;
 
@@ -133,11 +127,11 @@ if (isset($_GET['store_id'])) {
                             case 'menu_hover_background':
                                 $css .= '#header-menu > li > a:hover { background-color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'menu_dropdown_background':
                                 $css .= '#header-menu > li > ul { background-color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'menu_dropdown_hover_background':
                                 $css .= '#header-menu > li > ul > li > a:hover { background-color: ' . $color . '; }';
                                 break;
@@ -185,31 +179,31 @@ if (isset($_GET['store_id'])) {
                             case 'footer_link_color':
                                 $css .= 'ul.footer-links a { color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'footer_link_hover_color':
                                 $css .= 'ul.footer-links a:hover { color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'footer_text_color':
                                 $css .= '.footer-content, .footer-content p { color: ' . $color . '; }';
                                 break;
-                            
+
                             case 'sidebar_header_background_color':
                                 $css .= '.content-container .sidebar .header h3 { background-color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'sidebar_header_text_color':
                                 $css .= '.content-container .sidebar .header h3 { color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'sidebar_box_background_color':
                                 $css .= '.content-container .sidebar .content { background-color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'sidebar_box_link_color':
                                 $css .= '.content-container .sidebar .content a { color: ' . $color . '; }';
                                 break;
-                                
+
                             case 'sidebar_box_link_hover_color':
                                 $css .= '.content-container .sidebar .content a:hover { color: ' . $color . '; }';
                                 break;
@@ -232,8 +226,7 @@ if (isset($_GET['store_id'])) {
                     }
 
                 }
-            }
-            else {
+            } else {
                 $css .= 'PHP_EOL/= Specific colors could not be found.. =/PHP_EOL';
             }
 
@@ -242,23 +235,24 @@ if (isset($_GET['store_id'])) {
                 $css .= 'PHP_EOL/= Extra stylesheet, user generated =/PHP_EOL';
                 $css .= $check['setting_value'];
             }
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             $css .= 'PHP_EOL/= Could not load extra CSS =/';
         }
     }
 }
 
-$css = preg_replace( '#\s+#', ' ', $css );
-$css = preg_replace( '#/\*.*?\*/#s', '', $css );
-$css = preg_replace( '#/=(.*?)=/#s', '/* \1 */', $css );
-$css = str_replace( 'PHP_EOL', "\n", $css );
-$css = str_replace( '; ', ';', $css );
-$css = str_replace( ': ', ':', $css );
-$css = str_replace( ' {', '{', $css );
-$css = str_replace( '{ ', '{', $css );
-$css = str_replace( ' , ', ',', $css );
-$css = str_replace( '} ', '}', $css );
-$css = str_replace( ';}', '}', $css );
+$css = preg_replace('#\s+#', ' ', $css);
+$css = preg_replace('#/\*.*?\*/#s', '', $css);
+$css = preg_replace('#/=(.*?)=/#s', '/* \1 */', $css);
+$css = str_replace('PHP_EOL', PHP_EOL, $css);
+$css = str_replace('; ', ';', $css);
+$css = str_replace(': ', ':', $css);
+$css = str_replace(' {', '{', $css);
+$css = str_replace('{ ', '{', $css);
+$css = str_replace(' >', '>', $css);
+$css = str_replace('> ', '>', $css);
+$css = str_replace(' , ', ',', $css);
+$css = str_replace('} ', '}', $css);
+$css = str_replace(';}', '}', $css);
 
-echo '/* Combined, stripped and cleaned stylesheet generated on ' . date('d-m-Y H:i:s') . ' in ' . round(microtime(true) - $start, 8) . ' seconds */' . PHP_EOL . trim($css);
+echo '/* Combined, stripped and cleaned stylesheet generated on ', date('d-m-Y H:i:s'), ' in ', round(microtime(true) - $start, 8), ' seconds */', PHP_EOL, trim($css);
