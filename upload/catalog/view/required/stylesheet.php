@@ -255,4 +255,4 @@ $css = str_replace(' , ', ',', $css);
 $css = str_replace('} ', '}', $css);
 $css = str_replace(';}', '}', $css);
 
-echo '/* Combined, stripped and cleaned stylesheet generated on ' . date('d-m-Y H:i:s') . ' in ' . round(microtime(true) - $start, 8) . ' seconds */' . PHP_EOL . trim($css);
+echo '/* Combined, stripped and cleaned stylesheet generated on ', date('d-m-Y H:i:s'), ' in ', round(microtime(true) - $start, 8), ' seconds */', PHP_EOL, trim($css);
