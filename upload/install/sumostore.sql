@@ -12201,7 +12201,7 @@ INSERT INTO `PREFIX_translations` (`id`, `key_id`, `language_id`, `value`) VALUE
 (5120, 2118, 1, 'Transactie-Nr.'),
 (5121, 2121, 1, 'Er zijn geen punten/vergoedingen in uw account gevonden. Probeer het later opnieuw.'),
 (5123, 2122, 1, 'Uw wenslijst bevat nog geen producten. Als u een product tegenkomt wat u in de toekomst misschien wilt kopen, dan kunt u deze bij de detailweergave van een product toevoegen aan deze wenslijst.'),
-(5124, 2050, 1, 'Tekst:'),
+(5124, 2050, 1, 'Tekst'),
 (5125, 2105, 1, 'Verwijderen'),
 (5128, 2125, 1, 'De bestelling is in afwachting van de betaling. Zodra de betaling binnen is gekomen, wordt de bestelling doorgevoerd.'),
 (5129, 2123, 1, 'De betaling is geannuleerd. Kies een andere betaalmethode.'),
