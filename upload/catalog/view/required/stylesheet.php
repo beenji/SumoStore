@@ -34,10 +34,10 @@ if (!empty($_GET['theme'])) {
         if (!empty($files)) {
             $files = explode(',', $files);
             foreach ($files as $file) {
-                $theFile = '../theme/' . $theme . '/css/' . $file;
-                if (file_exists($theFile)) {
+                $file = '../theme/' . $theme . '/css/' . $file;
+                if (file_exists($file)) {
                     $css .= 'PHP_EOL/= Extra stylesheet: ' . $file . ' =/PHP_EOL';
-                    $css .= file_get_contents($theFile);
+                    $css .= file_get_contents($file);
                 } else {
                     $css .= 'PHP_EOL/= Extra stylesheet: ' . $file . ' was not found =/PHP_EOL';
                 }
