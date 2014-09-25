@@ -244,7 +244,7 @@ if (isset($_GET['store_id'])) {
 $css = preg_replace('#\s+#', ' ', $css);
 $css = preg_replace('#/\*.*?\*/#s', '', $css);
 $css = preg_replace('#/=(.*?)=/#s', '/* \1 */', $css);
-$css = str_replace('PHP_EOL', "\n", $css);
+$css = str_replace('PHP_EOL', PHP_EOL, $css);
 $css = str_replace('; ', ';', $css);
 $css = str_replace(': ', ':', $css);
 $css = str_replace(' {', '{', $css);
